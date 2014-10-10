@@ -60,6 +60,7 @@ GameManager.prototype.addStartTiles = function () {
 GameManager.prototype.addRandomTile = function () {
   if (this.grid.cellsAvailable()) {
     var type = Math.random() < -1.2 ? 'number' : 'operator';
+    type = 'number';
     var value = Math.random() < (type === 'number' ? 0.9 : 0.8) ? 2 : 4;
     var tile = new Tile(this.grid.randomAvailableCell(), value, type);
 
